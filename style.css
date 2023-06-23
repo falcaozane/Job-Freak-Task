@@ -1,0 +1,110 @@
+.nav-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 5px;
+    font-size: medium;
+    color: red;
+    font-weight: 500;
+  }
+  .left-panel{
+    border-radius: 0px 0px 50px 0px;
+    border: 0.5px dotted #c0bebe;
+    transition: width 0.3s;
+    width: 60px; /* Initial width of the left panel */
+    overflow-x: hidden;
+  }
+
+  .toggle-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .toggle-icon {
+    font-size: 24px;
+    color: red;
+    transition: transform 0.3s;
+  }
+  
+  .left-panel.expanded {
+    width: 200px; /* Width of the left panel when expanded */
+  }
+  
+  .left-panel.expanded .toggle-icon {
+    transform: rotate(270deg);
+  }
+
+  .left-panel.expanded .label {
+    display: inline;
+    margin-left: 20px;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .nav-link:active,
+  .nav-link:hover,
+  .nav-link::after {
+    color: brown;
+    font-weight: 600;
+  }
+  
+  i,
+  a {
+    color: red;
+  }
+  
+  #content {
+    background-color: whitesmoke;
+    border-radius: 25px;
+    border: 0.5px dotted #c0bebe;
+  }
+  
+  @media (max-width:600px) {
+    .nav-link {
+      margin-right: 5px;
+    }
+  
+    i,
+    a {
+      margin-left: 5px;
+    }
+
+    .left-panel{
+      border-radius: 0px 0px 40px 0px;
+      height: 60px; /* Adjust the height for small screens */
+      overflow-y: hidden; /* Hide the vertical overflow */
+      transition: height 0.3s; /* Add transition for smooth animation */
+    }
+
+    .left-panel.expanded {
+      height: 230px; /* Adjust the height when expanded */
+    }
+    
+  }
+  
+  @media (max-width:768px) {
+    .col-md-3 {
+      padding: 0;
+    }
+  
+    .nav-link {
+      font-size: small;
+    }
+  
+    i {
+      margin-right: 5px;
+      font-size: medium;
+    }
+  
+    #content {
+      padding: 20px;
+      margin: 10px;
+    }
+  }
+  
+  
